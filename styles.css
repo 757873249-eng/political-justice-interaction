@@ -1,0 +1,50 @@
+:root { --ink:#17221f; --muted:#6b7772; --paper:#f4f1e9; --line:#d8d8ce; --accent:#c8523d; --accent-dark:#9f392b; --sage:#687d70; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; color:var(--ink); background:#dfe5de; font-family: Georgia, "Songti SC", "STSong", serif; }
+button { font:inherit; }
+.app-shell { position:relative; width:min(100%, 760px); min-height:100vh; margin:auto; padding:28px 7vw 72px; background:var(--paper); overflow:hidden; }
+.topbar { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--line); padding-bottom:18px; font-family:Arial, sans-serif; font-size:12px; letter-spacing:1px; }
+.course-mark { color:var(--sage); font-weight:700; }
+.step-label { color:var(--muted); font-variant-numeric:tabular-nums; }
+.screen { display:none; padding-top:clamp(60px, 12vh, 118px); animation:rise .35s ease both; }
+.screen.active { display:block; }
+@keyframes rise { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
+.eyebrow, .note-index, .standard-label { margin:0 0 18px; color:var(--accent); font:700 11px/1.2 Arial, sans-serif; letter-spacing:2px; text-transform:uppercase; }
+h1, h2 { margin:0; font-weight:500; letter-spacing:0; line-height:1.16; }
+h1 { max-width:650px; font-size:clamp(39px, 7vw, 68px); }
+h2 { max-width:600px; font-size:clamp(30px, 5vw, 45px); }
+.lead { max-width:560px; margin:28px 0 0; color:#4c5a54; font-size:19px; line-height:1.7; }
+.context-note, .challenge { margin-top:48px; padding:22px 24px; border-left:3px solid var(--accent); background:#ebe9df; }
+.context-note p, .challenge p { margin:0; font-size:17px; line-height:1.65; }
+.primary-button, .restart-button, .text-button { cursor:pointer; border:0; }
+.primary-button { display:inline-flex; align-items:center; gap:24px; margin-top:44px; padding:15px 20px; color:#fff; background:var(--accent); font:700 14px Arial, sans-serif; letter-spacing:.5px; }
+.primary-button:hover { background:var(--accent-dark); }
+.primary-button span, .text-button span { font-size:20px; line-height:0; }
+.screen-hint { margin:18px 0 30px; color:var(--muted); font-size:16px; line-height:1.5; }
+.choices { display:grid; gap:10px; }
+.choice { display:flex; align-items:center; gap:18px; width:100%; padding:18px 20px; border:1px solid var(--line); color:var(--ink); background:transparent; text-align:left; cursor:pointer; transition:.2s ease; }
+.choice:hover, .choice.selected { border-color:var(--accent); background:#ebe9df; }
+.choice-key { display:grid; place-items:center; width:31px; height:31px; flex:none; color:var(--accent); border:1px solid currentColor; font:700 13px Arial, sans-serif; }
+.choice strong, .choice small { display:block; }
+.choice strong { font-size:18px; font-weight:500; }
+.choice small { margin-top:5px; color:var(--muted); font:13px Arial, sans-serif; }
+.text-button { margin-top:28px; padding:0; color:var(--accent); background:transparent; font:700 14px Arial, sans-serif; }
+.text-button:disabled { color:#abb1aa; cursor:not-allowed; }
+.reveal-panel { margin-top:34px; padding:28px; background:#ebe9df; }
+.standard-label { margin-bottom:11px; color:var(--sage); }
+.standard-name { margin:0; color:var(--accent-dark); font-size:30px; }
+.standard-copy { max-width:580px; margin:16px 0 0; font-size:18px; line-height:1.7; }
+.theory-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.theory-links span { padding:7px 10px; color:var(--sage); border:1px solid #b8c3b9; font:12px Arial, sans-serif; }
+.challenge { margin-top:22px; }
+.challenge .note-index { margin-bottom:10px; }
+.questions { display:grid; gap:0; margin-top:35px; border-top:1px solid var(--line); }
+.questions article { display:flex; gap:20px; align-items:baseline; padding:22px 0; border-bottom:1px solid var(--line); }
+.questions span { color:var(--accent); font:700 12px Arial, sans-serif; }
+.questions p { margin:0; font-size:22px; line-height:1.35; }
+.closing-note { margin-top:42px; padding:23px 0; border-top:3px solid var(--ink); }
+.closing-note p { margin:0 0 10px; font-size:20px; }
+.closing-note strong { display:block; font-size:25px; line-height:1.45; font-weight:500; }
+.restart-button { margin-top:30px; padding:12px 16px; color:var(--ink); border:1px solid var(--ink); background:transparent; font:13px Arial, sans-serif; }
+.footer-note { position:absolute; bottom:25px; left:7vw; color:#8a918b; font:11px Arial, sans-serif; }
+@media (max-width:560px) { .app-shell { padding-left:22px; padding-right:22px; } .screen { padding-top:65px; } .lead { font-size:17px; } .context-note { margin-top:36px; } .footer-note { left:22px; } .questions p { font-size:19px; } .closing-note strong { font-size:21px; } }

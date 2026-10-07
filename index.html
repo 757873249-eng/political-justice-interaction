@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>政治正义的实践逻辑 | 课堂互动</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <span class="course-mark">政治学原理 · 翻转课堂</span>
+      <span class="step-label" id="stepLabel">01 / 03</span>
+    </header>
+
+    <section class="screen active" data-screen="1">
+      <p class="eyebrow">一次公共决策</p>
+      <h1>公共资源有限时，<br>什么分配才是正义的？</h1>
+      <p class="lead">某县获得一笔只能使用一次的公共资金。你是参与方案讨论的公民，只能选择一个优先方向。</p>
+      <div class="context-note">
+        <span class="note-index">现实背景</span>
+        <p>基本公共服务均等化与共同富裕，都要求公共权力在不同需要之间作出优先排序。</p>
+      </div>
+      <button class="primary-button" data-next="2">进入决策 <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="screen" data-screen="2">
+      <p class="eyebrow">第一步 · 作出选择</p>
+      <h2>这笔资金应优先投向哪里？</h2>
+      <p class="screen-hint">请根据第一反应选择一项。选择后，你将看到自己采用的正义标准。</p>
+      <div class="choices" role="radiogroup" aria-label="公共资金优先方向">
+        <button class="choice" data-choice="education" role="radio" aria-checked="false">
+          <span class="choice-key">A</span><span><strong>农村义务教育</strong><small>改善长期发展机会</small></span>
+        </button>
+        <button class="choice" data-choice="medical" role="radio" aria-checked="false">
+          <span class="choice-key">B</span><span><strong>老年医疗服务</strong><small>回应基本生活需要</small></span>
+        </button>
+        <button class="choice" data-choice="relief" role="radio" aria-checked="false">
+          <span class="choice-key">C</span><span><strong>低收入家庭救助</strong><small>优先改善最不利者</small></span>
+        </button>
+        <button class="choice" data-choice="transport" role="radio" aria-checked="false">
+          <span class="choice-key">D</span><span><strong>城乡公共交通</strong><small>追求更广泛的公共效益</small></span>
+        </button>
+      </div>
+      <button class="text-button" data-next="3" disabled id="continueButton">确认选择 <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="screen" data-screen="3">
+      <p class="eyebrow">第二步 · 暂停判断</p>
+      <h2 id="revealTitle">你的选择背后，依赖一种正义标准。</h2>
+      <div class="reveal-panel">
+        <p class="standard-label">你优先考虑的是</p>
+        <p class="standard-name" id="standardName"></p>
+        <p class="standard-copy" id="standardCopy"></p>
+        <div class="theory-links" id="theoryLinks"></div>
+      </div>
+      <div class="challenge">
+        <span class="note-index">请现场回答</span>
+        <p id="challengeText"></p>
+      </div>
+      <button class="primary-button" data-next="4">进入公共辩护 <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="screen" data-screen="4">
+      <p class="eyebrow">第三步 · 公共辩护</p>
+      <h2>一个选择，必须接受三个追问。</h2>
+      <div class="questions">
+        <article><span>01</span><p>谁被纳入了你的正义考虑？</p></article>
+        <article><span>02</span><p>谁可能因此被暂时放在后面？</p></article>
+        <article><span>03</span><p>如果结果不公，谁可以提出异议并推动修正？</p></article>
+      </div>
+      <div class="closing-note">
+        <p>政治正义不是作出一次正确选择就结束了。</p>
+        <strong>它还要求公共权力说明理由，接受参与，并允许制度被纠正。</strong>
+      </div>
+      <button class="restart-button" id="restartButton">重新体验</button>
+    </section>
+
+    <footer class="footer-note">本页面仅用于课堂讨论，不收集、不保存任何个人信息。</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
